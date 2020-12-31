@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebProgramlamaProje.Models.Kategori>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/stlye.css" rel="stylesheet" />
+<h1 id="create-index-name">Saç Modelleri</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    @if (User.IsInRole("Admin"))
+    {
+
+        <a class="create-btn" asp-action="Create">
+            <i class="fas fa-plus-circle"></i>
+        </a>
+
+    }
+}
+
+@foreach (var item in Model)
+{
+
+    
+    <div class="hair-card" id="card1">
+        <h4 style="text-align:center;">@Html.DisplayFor(modelItem => item.Baslik)</h4>
+        <div class="model-img">
+            <img src="@("~/image/" + item.ImageName)" asp-append-version="true" width="250px" height="350px" />
+        </div>
+        <div class="model-content">
+            <p class="model-detail">
+                @Html.DisplayFor(modelItem => item.Detay)
+            <hr />
+            </p>
+            <div class="model-content">
+                <p class="model-price">@Html.DisplayFor(modelItem => item.Fiyat) ₺</p>
+            </div>
+        </div>
+        <div class="admin-btn-box">
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Admin"))
+                {
+                    <div class="admin-btn">
+
+                        <a class="admin-btn1" asp-action="Edit" asp-route-id="@item.KategoriId">Düzenle</a> 
+                        <a class="admin-btn2" asp-action="Details" asp-route-id="@item.KategoriId">Detaylar</a> 
+                        <a class="admin-btn3" asp-action="Delete" asp-route-id="@item.KategoriId">Sil</a>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+}
+
+

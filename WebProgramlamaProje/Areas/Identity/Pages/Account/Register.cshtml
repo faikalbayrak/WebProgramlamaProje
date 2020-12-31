@@ -1,0 +1,55 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<link href="~/register-login.css" rel="stylesheet" />
+<div class="register-login-container">
+    <img id="register-img" src="~/Kuafor_Resimler/randevu_background.jpg" />
+    
+
+    <div class="row">
+        <h1>Kayıt Ol</h1>
+        <div class="col-md-4">
+            <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <h4>Yeni Hesap Oluştur.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.Ad">Ad</label>
+                    <input asp-for="Input.Ad" class="form-control" />
+                    <span asp-validation-for="Input.Ad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Soyad">Soyad</label>
+                    <input asp-for="Input.Soyad" class="form-control" />
+                    <span asp-validation-for="Input.Soyad" class="text-danger"></span>
+                </div>
+               
+                <div class="form-group">
+                    <label asp-for="Input.Email">E-posta</label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Input.Password">Şifre</label>
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.ConfirmPassword">Şifreni Onayla</label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Onayla</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

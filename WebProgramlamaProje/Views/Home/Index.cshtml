@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+    
+    <div class="container-body">
+
+        <a href="#">
+            <div class="date">
+                <p>Randevu Al</p>
+            </div>
+        </a>
+
+        <div class="welcome">
+            <h5>Berberim.com'a Hoş Geldiniz </h5>
+        </div>
+
+
+        <!--logo-->
+        <div class="logo1-container">
+
+            <img src="~/Kuafor_Resimler/logo.png" />
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec lorem ac erat maximus ultrices. Vestibulum ante ipsum primis.</p>
+        </div>
+        <!--logo-->
+        <!--slider-->
+        <div class="slider-container">
+
+            <div class="prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+
+
+            <div class="slider">
+                <img class="slide" src="~/Kuafor_Resimler/kuafor1.jpg" />
+                <img class="slide" src="~/Kuafor_Resimler/kuafor2.jpg" />
+                <img class="slide" src="~/Kuafor_Resimler/kuafor3.jpg" />
+                <img class="slide" src="~/Kuafor_Resimler/kuafor4.jpg" />
+            </div>
+
+
+
+            <div class="next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+        </div>
+        <!--slider-->
+        <!--location-->
+        <div class="location-container">
+            <hr class="border-light" id="loc-hr" /><h5><i class="fas fa-compass"></i></i> Konumumuz <i class="fas fa-compass"></i></i></h5>
+            <div class="location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96722.94269445982!2d30.312253935192157!3d40.74900328051242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccb2fad58e639f%3A0xb84f12f8c14f1221!2sSakarya!5e0!3m2!1str!2str!4v1609188990558!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        <!--location-->
+        <!--contact-->
+        <div class="contact-container">
+            <hr class="border-light" id="loc-hr2" /><h1><i class="far fa-envelope"></i> Bize Ulaşın <i class="far fa-envelope"></i></h1>
+            <div class="border"></div>
+            <form action="/" method="post" class="contact-form">
+                <input type="text" class="contact-form-text" placeholder="İsim" />
+                <input type="email" class="contact-form-text" placeholder="E-posta" />
+                <input type="text" class="contact-form-text" placeholder="Telefon" />
+                <textarea class="contact-form-text" placeholder="Mesaj"></textarea>
+                <input type="submit" class="contact-form-btn" value="Gönder"/>
+            </form>
+        </div>
+        <!--contact-->
+
+    </div>
+
+
+
+
+
+
+
+
+</body>

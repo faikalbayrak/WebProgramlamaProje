@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #fff;
+    
+}
+
+.register-login-container {
+    width: 100%;
+    height: 100%;
+    
+}
+.register-login-container #login-img {
+    width: 100%;
+    height: 755px;
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+
+.register-login-container #register-img{
+    width:100%;
+    height:840px;
+    position:absolute;
+    top:0;
+    z-index:-1;
+    
+}
+
+.register-login-container .row{
+    padding:50px;
+    display:block;
+}
+
+.register-login-container .row h4{
+    margin-left:15px;
+}
+
+.register-login-container .row .col-md-4 h4{
+    margin-left:2px;
+}
+
+.register-login-container .row h1 {
+    margin-bottom: 50px;
+    margin-left: 15px;
+}

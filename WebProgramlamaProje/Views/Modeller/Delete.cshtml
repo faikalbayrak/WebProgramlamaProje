@@ -1,0 +1,51 @@
+﻿@model WebProgramlamaProje.Models.Kategori
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Model Sil</h1>
+
+<h3>Bu modeli silmek istediğinizden emin misiniz ?</h3>
+<div>
+    <h4>Model Özellikleri</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Baslik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Baslik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detay)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ImageName)
+        </dd>
+        <dt>
+            Yüklenen Model Resmi
+        </dt>
+        <dd>
+            <img src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="250px" height="350px" />
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="KategoriId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Geri dön</a>
+    </form>
+</div>
