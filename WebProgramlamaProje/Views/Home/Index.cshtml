@@ -3,14 +3,38 @@
 }
 
 <body>
-    
+   
     <div class="container-body">
 
-        <a href="#">
-            <div class="date">
-                <p>Randevu Al</p>
-            </div>
-        </a>
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            @if (User.IsInRole("Admin") == false)
+            {
+                <a asp-controller="Randevu" asp-action="Create">
+                    <div class="date">
+                        <i id="icon" class="far fa-calendar-alt"></i>
+                        <p id="date-p">Randevu Al</p>
+                    </div>
+                </a>
+            }
+
+        }
+        else
+        {
+            @if (User.IsInRole("Admin") == false)
+            {
+                <a asp-area="Identity" asp-page="/Account/Login">
+                    <div class="date">
+                        <i id="icon" class="far fa-calendar-alt"></i>
+                        <p id="date-p">Randevu Al</p>
+                    </div>
+                </a>
+            }
+
+
+        }
 
         <div class="welcome">
             <h5>Berberim.com'a Hoş Geldiniz </h5>
@@ -55,19 +79,6 @@
             </div>
         </div>
         <!--location-->
-        <!--contact-->
-        <div class="contact-container">
-            <hr class="border-light" id="loc-hr2" /><h1><i class="far fa-envelope"></i> Bize Ulaşın <i class="far fa-envelope"></i></h1>
-            <div class="border"></div>
-            <form action="/" method="post" class="contact-form">
-                <input type="text" class="contact-form-text" placeholder="İsim" />
-                <input type="email" class="contact-form-text" placeholder="E-posta" />
-                <input type="text" class="contact-form-text" placeholder="Telefon" />
-                <textarea class="contact-form-text" placeholder="Mesaj"></textarea>
-                <input type="submit" class="contact-form-btn" value="Gönder"/>
-            </form>
-        </div>
-        <!--contact-->
 
     </div>
 

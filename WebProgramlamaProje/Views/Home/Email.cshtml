@@ -1,0 +1,53 @@
+﻿@model WebProgramlamaProje.Models.Email
+
+@{
+    ViewData["Title"] = "Email";
+}
+<link href="~/stlye.css" rel="stylesheet" />
+<h1 class="contact-h">Bize Ulaşın</h1>
+
+<h4 class="contact-h">İstediğiniz konuda bilgi almak için bize ulaşın.</h4>
+<hr />
+<div class="contact-row">
+    <div class="col-md-4">
+        <form asp-action="Email">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label">E-posta Adresi</label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label">Ad</label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label">Soyad</label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Baslik" class="control-label">Konu Başlığı</label>
+                <input asp-for="Baslik" class="form-control" />
+                <span asp-validation-for="Baslik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Icerik" class="control-label">Mesaj</label>
+                <input asp-for="Icerik" class="form-control" />
+                <span asp-validation-for="Icerik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Gönder" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="contact-goback">
+    <a asp-action="Index">Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

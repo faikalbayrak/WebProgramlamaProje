@@ -120,25 +120,26 @@ body .container-body {
 
 /*Logo bitiş*/
 
-.date{
-    width:80px;
-    height:80px;
-    background-color:#fff;
-    border-radius:10px;
-    position:fixed;
-    left:30px;
-    top:600px;
-    padding-top:20px;
-    cursor:pointer;
-    border: 1px solid #fff;
-    transition:.5s ease;
-    z-index:100;
-
+.date {
+    width: 80px;
+    height: 80px;
+    background-color: #E69D73;
+    position: fixed;
+    left: 30px;
+    top: 550px;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    z-index: 100;
 }
 
-.date:hover {
-    border-radius: 50%;
-    background-color: #EBE6A2;
+.date .fa-calendar-alt {
+    font-size:60px;
+    margin-left:15px;
+}
+
+.date #date-p{
+    font-size:15px;
 }
 
 .date p{
@@ -147,6 +148,34 @@ body .container-body {
     text-align:center;
 }
 
+
+.date2 {
+    width: 80px;
+    height: 80px;
+    background-color: #E69D73;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    z-index: 100;
+}
+
+.date2 .fa-calendar-alt {
+    font-size: 60px;
+    margin-left: 15px;
+}
+
+.date2 #date-p {
+    font-size: 15px;
+}
+
+.date2 p {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+}
 .navbar-logo{
     width:60px;
     height:60px;
@@ -262,47 +291,40 @@ footer .container{
     margin:40px auto;
     background:#34495e;
 }
-.contact-form{
-    max-width:600px;
-    margin:auto;
-    padding:0 10px;
-    overflow:hidden;
-}
-.contact-form-text{
-    display:block;
-    width:100%;
-    box-sizing:border-box;
-    margin: 16px 0;
-    border:0;
-    background:#fff;
-    padding:20px 40px;
-    outline:none;
-    color:#ddd;
-    transition 0.5s;
-    border-radius:10px;
+
+.contact-form-btn{
+    text-decoration:none;
+    margin-bottom:50px;
+    color:goldenrod;
 }
 
-.contact-form-text:hover{
-    box-shadow: 0 0 10px 4px #34495e;
+.contact-form-btn2{
+    position:absolute;
+    color:goldenrod;
+    bottom:10px;
+    right:500px;
+    text-decoration:none;
 }
-textarea.contact-form-text{
-    resize:none;
-    height:120px;
+
+.container-layout-bottom{
+    margin-left:450px;
 }
-.contact-form-btn{
-    border:0;
-    background:#34495e;
-    color: #fff;
-    padding: 12px 50px;
-    border-radius:20px;
-    cursor:pointer;
-    transition:0.5s;
-    margin-left:200px;
+
+.contact-row{
+    margin:40px;
 }
-.contact-form-btn:hover {
-    background: #fff;
-    color:#34495e;
+.contact-h{
+    margin-left:50px;
 }
+.contact-goback{
+    margin:60px;
+    position:absolute;
+    bottom:10px;
+}
+.contact-goback a {
+    text-decoration: none;
+}
+
 /*location bitiş*/
 
 /*nav item başlangıç*/
@@ -350,7 +372,7 @@ textarea.contact-form-text{
 .admin-btn-box{
     text-align:center;
 }
-.admin-btn-box a{
+.admin-btn a{
     text-decoration:none;
 }
 .admin-btn1{

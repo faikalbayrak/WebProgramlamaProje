@@ -8,6 +8,20 @@
 
 @if (User.Identity.IsAuthenticated)
 {
+    @if (User.IsInRole("Admin") == false)
+    {
+        <a asp-controller="Randevu" asp-action="Create">
+            <div class="date2">
+                <i id="icon" class="far fa-calendar-alt"></i>
+                <p id="date-p">Randevu Al</p>
+            </div>
+        </a>
+    }
+}
+
+
+@if (User.Identity.IsAuthenticated)
+{
     @if (User.IsInRole("Admin"))
     {
 
@@ -21,7 +35,7 @@
 @foreach (var item in Model)
 {
 
-    
+
     <div class="hair-card" id="card1">
         <h4 style="text-align:center;">@Html.DisplayFor(modelItem => item.Baslik)</h4>
         <div class="model-img">
@@ -30,21 +44,21 @@
         <div class="model-content">
             <p class="model-detail">
                 @Html.DisplayFor(modelItem => item.Detay)
-            <hr />
+                <hr />
             </p>
             <div class="model-content">
                 <p class="model-price">@Html.DisplayFor(modelItem => item.Fiyat) ₺</p>
             </div>
         </div>
         <div class="admin-btn-box">
+
             @if (User.Identity.IsAuthenticated)
             {
                 if (User.IsInRole("Admin"))
                 {
                     <div class="admin-btn">
-
-                        <a class="admin-btn1" asp-action="Edit" asp-route-id="@item.KategoriId">Düzenle</a> 
-                        <a class="admin-btn2" asp-action="Details" asp-route-id="@item.KategoriId">Detaylar</a> 
+                        <a class="admin-btn1" asp-action="Edit" asp-route-id="@item.KategoriId">Düzenle</a>
+                        <a class="admin-btn2" asp-action="Details" asp-route-id="@item.KategoriId">Detaylar</a>
                         <a class="admin-btn3" asp-action="Delete" asp-route-id="@item.KategoriId">Sil</a>
                     </div>
                 }

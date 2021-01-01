@@ -11,9 +11,11 @@ namespace WebProgramlamaProje.Data
     public class ApplicationDbContext : IdentityDbContext<UserName>
     {
         public DbSet<Kategori>Kategoriler { get; set; }
+        public DbSet<Randevu> Randevular { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
+        public DbSet<WebProgramlamaProje.Models.Email> Email { get; set; }
     }
 }

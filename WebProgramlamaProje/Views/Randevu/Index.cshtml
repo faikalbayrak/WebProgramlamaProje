@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebProgramlamaProje.Models.Randevu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    @if (User.IsInRole("Admin")==false)
+    {
+
+        <h1>Randevunuz başarı ile oluşturulmuştur</h1>
+
+    }
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    @if (User.IsInRole("Admin"))
+    {
+        <h2>Randevu Listesi</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ad)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Soyad)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.İstekleriniz)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Tarih)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kategorim)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Soyad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.İstekleriniz)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tarih)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kategorim.Baslik)
+                        </td>
+                        <td>
+                            <div class="admin-btn">
+                                <a class="admin-btn1" asp-action="Edit" asp-route-id="@item.RandevuId">Düzenle</a>
+                                <a class="admin-btn2" asp-action="Details" asp-route-id="@item.RandevuId">Detaylar</a>
+                                <a class="admin-btn3" asp-action="Delete" asp-route-id="@item.RandevuId">Sil</a>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    }
+}

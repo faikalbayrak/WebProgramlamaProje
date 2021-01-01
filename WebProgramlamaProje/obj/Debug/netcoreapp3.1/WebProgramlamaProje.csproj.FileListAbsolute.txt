@@ -227,3 +227,9 @@ C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\ne
 C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Modeller\Edit.cshtml.g.cs
 C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Modeller\Index.cshtml.g.cs
 C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Randevu\Create.cshtml.g.cs
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Randevu\Delete.cshtml.g.cs
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Randevu\Details.cshtml.g.cs
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Randevu\Edit.cshtml.g.cs
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Randevu\Index.cshtml.g.cs
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Email.cshtml.g.cs

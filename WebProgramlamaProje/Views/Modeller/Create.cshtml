@@ -4,11 +4,11 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Yeni Saç Modeli Ekle</h1>
+<h1 class="contact-h">Yeni Saç Modeli Ekle</h1>
 
-<h4>Özellikler</h4>
+<h4 class="contact-h">Özellikler</h4>
 <hr />
-<div class="row">
+<div class="contact-row">
     <div class="col-md-4">
         <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -33,14 +33,14 @@
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="contact-goback">
+    <a asp-action="Index">Geri Dön</a>
 </div>
 
 @section Scripts {
