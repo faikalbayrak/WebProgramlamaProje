@@ -1,51 +1,52 @@
 ﻿@model WebProgramlamaProje.Models.Randevu
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewData["Title"] = "Create";
 }
 <link href="~/stlye.css" rel="stylesheet" />
-<h1 class="contact-h">Randevu Al</h1>
+<h1 class="contact-h">@localizer["Baslik"]</h1>
 
-<h4 class="contact-h">Belirtilen bir tarihe randevu oluşturabilirsiniz</h4>
+<h4 class="contact-h">@localizer["Baslik2"]</h4>
 <hr />
 <div class="contact-row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Ad" class="control-label"></label>
+                <label asp-for="Ad" class="control-label">@localizer["Ad"]</label>
                 <input asp-for="Ad" class="form-control" />
                 <span asp-validation-for="Ad" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Soyad" class="control-label"></label>
+                <label asp-for="Soyad" class="control-label">@localizer["Soyad"]</label>
                 <input asp-for="Soyad" class="form-control" />
                 <span asp-validation-for="Soyad" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="İstekleriniz" class="control-label"></label>
+                <label asp-for="İstekleriniz" class="control-label">@localizer["İstekler"]</label>
                 <input asp-for="İstekleriniz" class="form-control" />
                 <span asp-validation-for="İstekleriniz" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Tarih" class="control-label"></label>
+                <label asp-for="Tarih" class="control-label">@localizer["Tarih"]</label>
                 <input asp-for="Tarih" class="form-control" />
                 <span asp-validation-for="Tarih" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="KategoriId" class="control-label">Model Seçimi</label>
+                <label asp-for="KategoriId" class="control-label">@localizer["ModelSec"]</label>
                 <select asp-for="KategoriId" class="form-control" asp-items="ViewBag.KategoriId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Kaydet" class="btn btn-primary" />
+                <input type="submit" value="@localizer["Kaydet"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div class="contact-goback">
-    <a asp-action="Index">Geri Dön</a>
+
+    <a asp-action="Index">@localizer["Geri"]</a>
 </div>
 
 @section Scripts {

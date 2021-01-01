@@ -120,8 +120,14 @@
   <data name="AnaSayfa" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="BizeUlas" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
   <data name="Gizlilik" xml:space="preserve">
     <value>Privacy</value>
+  </data>
+  <data name="Haklar" xml:space="preserve">
+    <value>All Rights Reserved</value>
   </data>
   <data name="SacModelleri" xml:space="preserve">
     <value>Hair Models</value>

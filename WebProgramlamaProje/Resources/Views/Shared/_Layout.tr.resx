@@ -120,8 +120,14 @@
   <data name="AnaSayfa" xml:space="preserve">
     <value>Ana Sayfa</value>
   </data>
+  <data name="BizeUlas" xml:space="preserve">
+    <value>Bize ulaşın</value>
+  </data>
   <data name="Gizlilik" xml:space="preserve">
     <value>Gizlilik</value>
+  </data>
+  <data name="Haklar" xml:space="preserve">
+    <value>Tüm Hakları saklıdır</value>
   </data>
   <data name="SacModelleri" xml:space="preserve">
     <value>Saç Modelleri</value>
