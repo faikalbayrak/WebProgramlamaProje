@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -30,16 +32,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
+                        <li id="language-btn" class="nav-item">
+                            <partial name="_Culture" />
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Ana Sayfa</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> @localizer["AnaSayfa"]</a>
                         </li>
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Modeller" asp-action="Index">Saç Modelleri</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Modeller" asp-action="Index">@localizer["SacModelleri"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@localizer["Gizlilik"]</a>
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {

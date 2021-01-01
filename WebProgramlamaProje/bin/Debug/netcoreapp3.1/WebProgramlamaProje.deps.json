@@ -299,6 +299,17 @@
         "runtime": {
           "WebProgramlamaProje.dll": {}
         },
+        "resources": {
+          "en/WebProgramlamaProje.resources.dll": {
+            "locale": "en"
+          },
+          "fr/WebProgramlamaProje.resources.dll": {
+            "locale": "fr"
+          },
+          "tr/WebProgramlamaProje.resources.dll": {
+            "locale": "tr"
+          }
+        },
         "compile": {
           "WebProgramlamaProje.dll": {}
         }

@@ -394,3 +394,8 @@ footer .container{
     background: #ff0000;
 }
 /*create index bitiş*/
+
+.container #language-btn{
+    position:absolute;
+    left:30px;
+}

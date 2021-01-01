@@ -3,12 +3,16 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProgramlamaProje.Data;
@@ -44,6 +48,22 @@ namespace WebProgramlamaProje
                 options.Password.RequireUppercase = false;
 
             });
+            services.AddLocalization(x => { x.ResourcesPath = "Resources"; });
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+            services.Configure<RequestLocalizationOptions>(
+                x =>
+                {
+                    var supportedCulteres = new List<CultureInfo>
+                    {
+                         new CultureInfo("tr"),
+                         new CultureInfo("en"),
+                         new CultureInfo("fr")
+                        
+                    };
+                    x.DefaultRequestCulture = new RequestCulture("tr");
+                    x.SupportedCultures = supportedCulteres;
+                    x.SupportedUICultures = supportedCulteres;
+                });
 
         }
 
@@ -68,6 +88,8 @@ namespace WebProgramlamaProje
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseRequestLocalization(app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseEndpoints(endpoints =>
             {
