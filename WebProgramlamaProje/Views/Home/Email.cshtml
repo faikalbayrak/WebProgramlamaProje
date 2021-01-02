@@ -4,51 +4,53 @@
     ViewData["Title"] = "Email";
 }
 <link href="~/stlye.css" rel="stylesheet" />
-<h1 class="contact-h">@localizer["Baslik"]</h1>
+<div class="contactus-img-container">
+    <img id="contactus-img" src="~/Kuafor_Resimler/contact-us.png" />
+    <h1 class="contact-h">@localizer["Baslik"]</h1>
 
-<h4 class="contact-h">@localizer["Baslik2"]</h4>
-<hr />
-<div class="contact-row">
-    <div class="col-md-4">
-        <div>@TempData["Message"]</div>
-        <form asp-action="Email">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="email" class="control-label">@localizer["Email"]</label>
-                <input asp-for="email" class="form-control" />
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ad" class="control-label">@localizer["Ad"]</label>
-                <input asp-for="Ad" class="form-control" />
-                <span asp-validation-for="Ad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Soyad" class="control-label">@localizer["Soyad"]</label>
-                <input asp-for="Soyad" class="form-control" />
-                <span asp-validation-for="Soyad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Baslik" class="control-label">@localizer["Konu"]</label>
-                <input asp-for="Baslik" class="form-control" />
-                <span asp-validation-for="Baslik" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Icerik" class="control-label">@localizer["Mesaj"]</label>
-                <input asp-for="Icerik" class="form-control" />
-                <span asp-validation-for="Icerik" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="@localizer["Gonder"]" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4 class="contact-h">@localizer["Baslik2"]</h4>
+    <hr />
+    <div class="contact-row">
+        <div class="col-md-4">
+            <div>@TempData["Message"]</div>
+            <form asp-action="Email">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="email" class="control-label">@localizer["Email"]</label>
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ad" class="control-label">@localizer["Ad"]</label>
+                    <input asp-for="Ad" class="form-control" />
+                    <span asp-validation-for="Ad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Soyad" class="control-label">@localizer["Soyad"]</label>
+                    <input asp-for="Soyad" class="form-control" />
+                    <span asp-validation-for="Soyad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Baslik" class="control-label">@localizer["Konu"]</label>
+                    <input asp-for="Baslik" class="form-control" />
+                    <span asp-validation-for="Baslik" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Icerik" class="control-label">@localizer["Mesaj"]</label>
+                    <input asp-for="Icerik" class="form-control" />
+                    <span asp-validation-for="Icerik" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="@localizer["Gonder"]" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <br />
+    <div class="contact-goback">
+        <a asp-action="Index">@localizer["GeriDon"]</a>
     </div>
 </div>
-<br />
-<div class="contact-goback">
-    <a asp-action="Index">@localizer["GeriDon"]</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

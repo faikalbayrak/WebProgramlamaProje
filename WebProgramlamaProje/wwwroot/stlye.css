@@ -330,6 +330,18 @@ footer .container{
     text-decoration: none;
 }
 
+.contactus-img-container{
+    width:100%;
+    height:100%;
+}
+.contactus-img-container #contactus-img{
+    width:100%;
+    height:777px;
+    position:absolute;
+    top:0;
+    z-index:-1;
+}
+
 /*location bitiş*/
 
 /*nav item başlangıç*/
@@ -404,3 +416,55 @@ footer .container{
     position:absolute;
     left:30px;
 }
+
+/*admin paneli baslangıcı*/
+
+.table{
+    width:1400px;
+    margin:40px;
+}
+
+#admin-h2{
+    margin:40px;
+}
+
+table #admin-table{
+    background:#fff;
+    border:3px solid #000;
+    border-radius:10px;
+}
+table #admin-tr {
+    background: #fff;
+    border-radius: 10px;
+}
+
+#randevu{
+    width:100%;
+    height:auto;
+    padding:300px;
+}
+#randevu #randevu-h1{
+    font-size:50px;
+    color:#fff;
+}
+
+#randevu #randevu-h4{
+    font-size:20px;
+    color:#fff;
+    margin-top:30px;
+    margin-left:270px;
+}
+
+#randevu-logo-container{
+    width:350px;
+    height:350px;
+    position:absolute;
+    left:550px;
+    top:100px;
+}
+#randevu-logo-container img{
+    width:350px;
+    height:350px;
+}
+
+/*admin paneli bitişi*/

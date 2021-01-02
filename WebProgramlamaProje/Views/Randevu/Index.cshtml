@@ -3,13 +3,19 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<link href="~/stlye.css" rel="stylesheet" />
 @if (User.Identity.IsAuthenticated)
 {
     @if (User.IsInRole("Admin")==false)
     {
-
-        <h1>Randevunuz başarı ile oluşturulmuştur</h1>
+        <div id="randevu">
+            <div id="randevu-logo-container">
+                <img src="~/Kuafor_Resimler/logo.png" />
+            </div>
+            <h1 id="randevu-h1">Randevunuz başarı ile oluşturulmuştur</h1>
+            <h4 id="randevu-h4"><a asp-controller="Home" asp-action="Index">Buradan</a> ana sayfaya dönebilirsiniz</h4>
+        </div>
+        
 
     }
 }
@@ -18,9 +24,9 @@
 {
     @if (User.IsInRole("Admin"))
     {
-        <h2>Randevu Listesi</h2>
+        <h2 id="admin-h2">Randevu Listesi</h2>
         <table class="table">
-            <thead>
+            <thead id="admin-table">
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.Ad)
@@ -43,7 +49,7 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr id="admin-tr">
                         <td>
                             @Html.DisplayFor(modelItem => item.Ad)
                         </td>
