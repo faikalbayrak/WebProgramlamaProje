@@ -117,16 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Hoşgeldiniz" xml:space="preserve">
-    <value>Hoşgeldiniz</value>
-  </data>
-  <data name="Konum" xml:space="preserve">
-    <value>Konumumuz</value>
-  </data>
   <data name="Randevu" xml:space="preserve">
-    <value>Randevu Al</value>
+    <value>Your appointment has been created successfully</value>
   </data>
-  <data name="Slogan" xml:space="preserve">
-    <value>İşinde uzman genç kadromuz ile sizi hayal ettiğiniz görünüme ulaştırmaya çalışıyoruz...</value>
+  <data name="Randevu2" xml:space="preserve">
+    <value>From here</value>
+  </data>
+  <data name="Randevu3" xml:space="preserve">
+    <value>You can return to the main page</value>
   </data>
 </root>

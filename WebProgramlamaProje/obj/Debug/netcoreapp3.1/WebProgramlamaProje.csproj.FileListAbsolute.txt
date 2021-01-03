@@ -271,3 +271,6 @@ C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\ne
 C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\WebProgramlamaProje.Resources.Views.Home.Privacy.en.resources
 C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\WebProgramlamaProje.Resources.Views.Home.Privacy.fr.resources
 C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\WebProgramlamaProje.Resources.Views.Home.Privacy.tr.resources
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\WebProgramlamaProje.Resources.Views.Randevu.Index.en.resources
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\WebProgramlamaProje.Resources.Views.Randevu.Index.fr.resources
+C:\Users\falba\source\repos\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\netcoreapp3.1\WebProgramlamaProje.Resources.Views.Randevu.Index.tr.resources
